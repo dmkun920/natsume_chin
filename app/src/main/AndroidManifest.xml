@@ -10,6 +10,11 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.NatsuChin">
         <activity
+                android:name=".PlayBoard"
+                android:exported="true"
+                android:label="@string/title_activity_play_board"
+                android:theme="@style/Theme.NatsuChin.NoActionBar"/>
+        <activity
                 android:name=".MainActivity"
                 android:exported="true">
             <intent-filter>

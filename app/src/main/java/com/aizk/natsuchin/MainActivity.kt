@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
             btPN.setOnClickListener(NextListener())          // リスナ関数を登録
 
-            btPN.isEnabled = false
+//            btPN.isEnabled = false
         }
 
     }
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 aView.tv3.text = ""
                 aView.bt.isEnabled = true
             }
-            binding.btPN.isEnabled = false
+//            binding.btPN.isEnabled = false
 
         }
     }
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         // onClickイベントを拾うメソッドをオーバーライド
         override fun onClick(v: View?) {
 
-            myButton.isEnabled = false
+//            myButton.isEnabled = false
 
 //            Log.d("myTAG", "onClick in..." )     // debug-write
 
@@ -142,5 +142,11 @@ enum class Judges {
 }
 
 // ★★★　viewをMainで簡易的につくっているので、、これのList型で表現。　本来は「データバインディング」で実装する
-data class ViewSet(var bt: Button, var tv1: TextView, var tv2: TextView, var tv3: TextView, var player: ChinPlayer)
+data class ViewSet(
+    var bt: Button,
+    var tv1: TextView,
+    var tv2: TextView,
+    var tv3: TextView,
+    var player: ChinPlayer
+    )
 
