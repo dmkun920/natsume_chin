@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NatsuChin</string>
+
+    <string name="defaut_UserA">Player1</string>
+    <string name="defaut_UserB">Player2</string>
+    <string name="defaut_UserC">Player3</string>
+    <string name="defaut_UserU">Me     </string>
+    <string name="NEXT_ButtonName">NEXT</string>
+    <string name="first_bet">10</string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
+    <string name="player1">Player1</string>
+    <string name="player2">Player2</string>
+    <string name="player3">Player3</string>
+    <string name="player_me">Player Me</string>
+    <string name="next_play">Next Play</string>
+</resources>

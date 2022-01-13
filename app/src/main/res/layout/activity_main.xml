@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+    <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="192dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="50dp">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/forUserA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaut_UserA"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="303dp"
+                    android:id="@+id/tv_P1_1"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="356dp"
+                    android:id="@+id/tv_P1_2"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="403dp"
+                    android:id="@+id/tv_P1_3"
+                    android:layout_marginStart="20dp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/forUserB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:text="@string/defaut_UserB"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="303dp"
+                    android:id="@+id/tv_P2_1"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="356dp"
+                    android:id="@+id/tv_P2_2"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="403dp"
+                    android:id="@+id/tv_P2_3"
+                    android:layout_marginStart="20dp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/forUserC"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaut_UserC"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="303dp"
+                    android:id="@+id/tv_P3_1"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="356dp"
+                    android:id="@+id/tv_P3_2"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="403dp"
+                    android:id="@+id/tv_P3_3"
+                    android:layout_marginStart="20dp"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/forUserD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:text="@string/defaut_UserU"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="303dp"
+                    android:id="@+id/tv_P4_1"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="356dp"
+                    android:id="@+id/tv_P4_2"
+                    android:layout_marginStart="20dp"/>
+            <TextView
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="403dp"
+                    android:id="@+id/tv_P4_3"
+                    android:layout_marginStart="20dp"/>
+
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="201dp" android:gravity="bottom"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="500dp"
+            android:layout_marginBottom="50dp" android:id="@+id/linearLayout">
+        <Button
+                android:text="@string/player1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/bt_P1" android:layout_weight="1"
+                android:visibility="visible" style="@android:style/Widget.Button"/>
+        <Button
+                android:text="@string/player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/bt_P2" android:layout_weight="1"
+                style="@android:style/Widget.Button"/>
+        <Button
+                android:text="@string/player3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/bt_P3" android:layout_weight="1"
+                style="@android:style/Widget.Button"/>
+        <Button
+                android:text="@string/player_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/bt_P4" android:layout_weight="1"
+                style="@android:style/Widget.Button.Small"/>
+        <Button
+                android:text="@string/next_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/bt_PN" android:layout_weight="1"
+                style="@android:style/Widget.Button"/>
+    </LinearLayout>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="5"
+            android:id="@+id/betValue" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout" android:autofillHints=""
+            style="@android:style/Widget.DeviceDefault.EditText" android:text="@string/first_bet"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
