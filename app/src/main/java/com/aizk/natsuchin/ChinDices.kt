@@ -43,9 +43,7 @@ class ChinDices() {
                 Hand.Zorome to "ぞろ目",
                 Hand.Hifumi to "一二三"
             )
-        val yakumei: String? = yakumeiDictionary[myHand]
-
-        return (if (yakumei != null) yakumei else "---" )
+        return yakumeiDictionary[myHand] ?: "---"
     }
 
     // accessing

@@ -1,12 +1,11 @@
 package com.aizk.natsuchin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.aizk.natsuchin.databinding.ActivityPlayBoardBinding
 
 class PlayBoard : AppCompatActivity() {
@@ -52,11 +51,6 @@ class PlayBoard : AppCompatActivity() {
         }
     }
 
-    fun ttt(view: View) {
-        Toast.makeText(this,"Clicked", Toast.LENGTH_LONG).show()
-
-    }
-
     // リスナとして登録されるクラス　★クラス名は大文字で始まる
     private inner class NextListener : View.OnClickListener {
         // onClickイベントを拾うメソッドをオーバーライド
@@ -91,16 +85,13 @@ class PlayBoard : AppCompatActivity() {
             // 指定プレーヤにサイを振らせる
             aPlayer.setThrowing()
             textView1.text = aPlayer.myHandMe
-            textView2.text = aPlayer.myHandName + "(" + aPlayer.myHandKachime + ") "
+            textView2.text = "${aPlayer.myHandName}(${aPlayer.myHandKachime}) "
 
             playCnt += 1
 
             if (playCnt == 4) { // 4人プレーしたら判定（judging()）へ
 
-                val aBet: Int? = binding.betValue.text.toString().toIntOrNull()
-                if (aBet == null) {
-                    return  // Betを入力項目からget
-                }
+                val aBet: Int = binding.betValue.text.toString().toIntOrNull() ?: return
 
                 binding.btPN.isEnabled = true
                 thisEnvironment.judging(aBet)
@@ -118,7 +109,7 @@ class PlayBoard : AppCompatActivity() {
 
         for (eachPlayer in thisEnvironment.players) {
             var bufString: String =
-                if (eachPlayer.howWon != Judges.na) " <" + eachPlayer.howWon.toString() + "> " else "　　　　"
+                if (eachPlayer.howWon != Judges.NA) " <" + eachPlayer.howWon.toString() + "> " else "　　　　"
             bufString += eachPlayer.myPoints.toString()
 
             playersPuts.add(bufString)
@@ -145,7 +136,7 @@ enum class Hand(val power: Int) {
 }
 
 enum class Judges {
-    Win, Fall, Drow, na
+    Win, Fall, Drow, NA
 }
 
 // ★★★　viewをMainで簡易的につくっているので、、これのList型で表現。　本来は「データバインディング」で実装する

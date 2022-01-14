@@ -10,11 +10,11 @@ class ChinPlayer(aName: String, dices: ChinDices) {
 
     // インスタンス変数
     var myName = aName
-    val myDices = dices
+    private val myDices = dices
     var myHand = Hand.Butame
     var power = 0
     var myPoints = 1000
-    var howWon = Judges.na
+    var howWon = Judges.NA
 
     var myHandName = "buta"
     var myHandMe = "[0][0][0]"
@@ -35,7 +35,7 @@ class ChinPlayer(aName: String, dices: ChinDices) {
         myHandName = myDices.myHandName()
         myHandMe = myDices.myHandMe()
         myHandKachime = myDices.kachime
-        howWon = Judges.na
+        howWon = Judges.NA
     }
 
     // comparing

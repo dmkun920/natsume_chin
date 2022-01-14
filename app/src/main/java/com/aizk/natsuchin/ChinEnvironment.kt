@@ -10,7 +10,7 @@ import android.util.Log
 class ChinEnvironment() {
 
     // インスタンス変数
-    var playDices = ChinDices()
+    private var playDices = ChinDices()
     val players: MutableList<ChinPlayer> = mutableListOf()
 
     // 初期化メソット（必ず呼ばれる）
