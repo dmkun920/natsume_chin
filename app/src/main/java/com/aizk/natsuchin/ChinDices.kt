@@ -1,24 +1,21 @@
 package com.aizk.natsuchin
 
-// 3個のダイスがある（ダイスセット；一人分）
-// ダイスを振ることができる（3個）
-// インスタンス同士を比較できる（どちらが強いか）
-// 目と役を印刷する
-
-import android.util.Log
-
+/**
+ * 3個のダイスがある（ダイスセット；一人分）
+ * ダイスを振ることができる（3個）
+ * インスタンス同士を比較できる（どちらが強いか）
+ * 目と役を印刷する
+ */
 class ChinDices() {
 
     // インスタンス変数
-    var power: Int = 0
-    var kachime: Int = 0
-    var myHand: Hand = Hand.Butame
-    private var diceA: Dice = Dice()
-    private var diceB: Dice = Dice()
-    private var diceC: Dice = Dice()
-//    var diceA: Dice = Dice()
-//    var diceB: Dice = Dice()
-//    var diceC: Dice = Dice()
+    var power = 0
+    var kachime = 0
+    var myHand = Hand.Butame
+
+    private var diceA = Dice()
+    private var diceB = Dice()
+    private var diceC = Dice()
 
     fun throwing() {
         diceA.throwing()
@@ -27,18 +24,11 @@ class ChinDices() {
         myHand = handAnalyze()
     }
 
-//    fun throwing() {
-//        throwingOne()
-//        if (this.isButame()) throwingOne()
-//        if (this.isButame()) throwingOne()
-//    }
-
     // printing
-
     fun myHandMe(): String {
-        val myMeA: Int = diceA.points
-        val myMeB: Int = diceB.points
-        val myMeC: Int = diceC.points
+        val myMeA = diceA.points
+        val myMeB = diceB.points
+        val myMeC = diceC.points
 
         return ("[$myMeA] [$myMeB] [$myMeC] ")
     }
@@ -59,13 +49,11 @@ class ChinDices() {
     }
 
     // accessing
-
     fun isButame(): Boolean {
         return (myHand == Hand.Butame)
     }
 
     // private
-
     private fun pairDicePoint(): Int {
         if (diceA.points == diceB.points) return (diceC.points)
         if (diceB.points == diceC.points) return (diceA.points)

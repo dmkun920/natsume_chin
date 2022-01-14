@@ -1,23 +1,24 @@
 package com.aizk.natsuchin
 
-// プレーヤ ☓一人
-// ダイスセット（３個）をEnvironmentから渡される
-// １ゲーム分のダイスを振る
-// インスタンス同士を比較できる（強さが同じか）
-
+/**
+ * プレーヤ ☓一人
+ * ダイスセット（３個）をEnvironmentから渡される
+ * １ゲーム分のダイスを振る
+ * インスタンス同士を比較できる（強さが同じか）
+ */
 class ChinPlayer(aName: String, dices: ChinDices) {
 
     // インスタンス変数
-    var myName: String = aName
-    val myDices: ChinDices = dices
-    var myHand: Hand = Hand.Butame
-    var power: Int = 0
-    var myPoints: Int = 1000
-    var howWon: Judges = Judges.na
+    var myName = aName
+    val myDices = dices
+    var myHand = Hand.Butame
+    var power = 0
+    var myPoints = 1000
+    var howWon = Judges.na
 
-    var myHandName: String = "buta"
-    var myHandMe: String = "[0][0][0]"
-    var myHandKachime: Int = 0
+    var myHandName = "buta"
+    var myHandMe = "[0][0][0]"
+    var myHandKachime = 0
 
     init {
         setThrowing()
